@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--23-->
+        <link rel="stylesheet" href="styles.css">
+        <title>Survey Form Project</title>
+        <!--5-->
+        <h1 id="title">Welcome to my Survey Form Project!</h1>
+        <!--6-->
+        <p id="description">The following survey demonstrates HTML competency.</p>
+    </head>
+    <hr>
+    <div class="survey-form">
+        <!--7-->
+        <form id="survey-form">
+            <fieldset>
+                <legend>Personal Info</legend>
+                <!--15-->
+                <label for="name" id="name-label" name="name">Please enter your name:</label><br>
+                <!--8-->
+                <input type="text" id="name" placeholder="Please enter your name..." required><br>
+                <!--15-->
+                <label for="email" id="email-label" name="email">Please enter your email:</label><br>
+                <!--9-->
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                <!--15-->
+                <label for="age" id="number-label" name="age">Please enter your age:</label><br>
+                <!--11-->
+                <input type="number" id="number" name="age" min="18" max="120" placeholder="Enter your age..."><br>
+            </fieldset>
+            <fieldset>
+                <legend>Dropdown Input</legend>
+                <!--16-->
+                <label for="dropdown">Please selection an option:</label><br>
+                <select id="dropdown">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select><br>
+            </fieldset>
+            <fieldset>
+                <legend>Radio Input</legend>
+                <!--17-->
+                <input type="radio" name="radio-select" value="radio1">
+                <label for="radio">Radio1</label><br>
+                <input type="radio" name="radio-select" value="radio2">
+                <label for="radio">Radio2</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Checkbox Input</legend>
+                <!--18-->
+                <input type="checkbox" id="check1" name="check1" value="check-value1">
+                <label for="check1">Check1</label><br>
+                <input type="checkbox" id="check2" name="check2" value="check-value2">
+                <label for="check2">Check2</label><br>
+                <input type="checkbox" id="check3" name="check3" value="check-value3">
+                <label for="check3">Check3</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Textarea Input</legend>
+                <!--19-->
+                <label for='textarea' id='textarea-label'></label>Textarea<br>                
+                <textarea id="textarea" name="textarea" rows="4" cols="50" form="survey-form"></textarea><br>
+                <!--20-->
+                <input type="submit" id="submit"><br>
+            </fieldset>
+        </form>
+    </div>
+</html>
