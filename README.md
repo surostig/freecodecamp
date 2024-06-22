@@ -1,2 +1,2 @@
 # freecodecamp
-Documenting  free verified certifications earned with freeCodeCamp's core curriculum.
+Documenting completed projects for verified certifications earned with freeCodeCamp's core curriculum.
