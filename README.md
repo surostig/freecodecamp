@@ -1,2 +1,2 @@
 # freecodecamp
-Documenting completed projects for verified certifications earned with freeCodeCamp's core curriculum.
+[http://www.freecodecamp.com/surostig](https://www.freecodecamp.org/surostig)
