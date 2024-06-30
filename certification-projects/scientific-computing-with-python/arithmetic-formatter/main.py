@@ -8,3 +8,16 @@ def arithmetic_arranger(problems):
     
     if len(problems) > limit:
         raise ValueError('Error: Too many problems.')
+
+    for problem in problems:
+        pass
+
+def main():
+    return arithmetic_arranger(problems)
+
+main()
+
+test = problems[1].split(' ')
+print(f'The first problem is {test}')
+for i in test:
+    print (i.isnumeric(), i.isalpha())
