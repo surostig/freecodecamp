@@ -1,45 +1,36 @@
 # list problems to be formatted
-problems = ["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]
-operators_allowed = ['+', '-']
-operators_disallowed = ['*', '/']
-
-# create arranger function for the problems
-def arithmetic_arranger(problems):
+problems = ["32 + 698", "301 - 2", "45 + 43", "123 + 49"]
 
 # establish limits and operators allowed/disallowed
-    limit = 5
-    
-# check whether operator is allowed or disallowed
-    def operator_check(operator):
-        if operator in operators_allowed:
-            pass
-        elif operator in operators_disallowed:
-            raise ValueError("Error: Error: Operator must be '+' or '-'.")
 
-# check if problem list is within limit    
-    if len(problems) > limit:
-        raise ValueError('Error: Too many problems.')
+def arithmetic_arranger(problems, show_answer=False):
+    problems_limit = 5
+    digit_limit = 4
+    operators_allowed = ['+', '-']
+    operators_disallowed = ['*', '/']
+    is_number = lambda x : x.isnumeric()  
 
-# proceed to arrange problems if list within limit
+    for i in problems:
 
+        components = i.split(' ')
 
-def main():
-    return arithmetic_arranger(problems)
+        for i in components:
+            print(i, is_number(i))
+            # identify and assign operator
+            if i in operators_allowed:
+                operator = i
 
-# run the arranger
-main()
+            # value error checks    
+            elif i in operators_disallowed:
 
-# select a test problem to analyze
-test = problems[0].split(' ')
-print(f'The first problem is {test}')   
+                raise ValueError("Error: Operator must be '+' or '-'.")
+            
+            if i not in operators_allowed+operators_disallowed and is_number(i) == False:
 
-# analyze strings in test
-for string in test:
-    tests = []
-    tests.append(type(string))
-    tests.append(len(string))
-    tests.append(string)
-    if string in operators_allowed + operators_disallowed:
-       print(f'The operator is {string}') 
-
-
+                raise ValueError('Error: Numbers must not contain letters')
+            
+            if len(i) > digit_limit:
+                
+                raise ValueError('Error: Numbers cannot be more than four digits.')
+     
+arithmetic_arranger(problems)
