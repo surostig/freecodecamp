@@ -1,7 +1,12 @@
+NUMBER_OF_DISKS = 3
+number_of_moves = 2**NUMBER_OF_DISKS - 1
 rods = {
-    'A': range(3, 0, -1),
+    'A': list(range(NUMBER_OF_DISKS, 0, -1)),
     'B': [],
     'C': []
 }
 
-print(type(rods['A']))
+def move():
+    print(rods)
+
+move()
